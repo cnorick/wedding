@@ -1,0 +1,13 @@
+ceremony:
+  location:
+    address: 640 Pansy Hill Rd
+    city: Harriman
+    state: TN
+    long_state: Tennessee
+    zip: 37748
+    venue_name:
+  date: 2021-04-03 17:00:00 −04:00
+
+reception:
+  location:
+  date:
