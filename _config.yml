@@ -1,12 +1,18 @@
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
 # Site settings
-title: Chris & Nikita
-email: chris@baclig.me
-url: http://www.chrisandnikita.com
+title: Rebecca & Ryan
+email: nathan@nathanorick.com
+url: http://countdowntorutherford.com
 description: "We're getting married and can't wait to celebrate with you!"
 baseurl: ""
-host: 0.0.0.0 # listen to LAN connections
-gems:
-  - jekyll-sitemap
+
+collections:
+  stories:
+    sort_by: order
 
 # Build settings
 markdown: kramdown
