@@ -307,7 +307,7 @@ a:focus {
   width: 100%;
   padding: 50px 0;
   color: #fff;
-  background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
+  background: url(../img/downloads-bg.jpg) no-repeat center center;
   background-color: #000000;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -447,6 +447,9 @@ dd {
   */
   .billboard {
     background-attachment: fixed;
+  }
+  .billboard-header {
+    background-attachment: scroll;
   }
 }
 

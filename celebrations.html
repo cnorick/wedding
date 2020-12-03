@@ -1,9 +1,10 @@
 ---
 layout: info
 title: Celebrations
-billboard_class: billboard-stairs
+billboard_image: /assets/img/wall.jpg
+image_position: center center
 ---
-{% for event in site.events[site.context] %}
+{% for event in site.data.events %}
   <section class="container content-section {% cycle 'text-left', 'text-right' %}">
     <div class="row">
       <div class="col-lg-7 col-lg-offset-{% cycle 2, 3 %} col-sm-offset-2 col-sm-8">
@@ -11,7 +12,11 @@ billboard_class: billboard-stairs
           {{ event.name }}
           <br>
           <small>
-            {{ event.date }} | {{ event.time }}
+            {% if event.date %}
+              {{ event.date | date: '%A, %B %e, %Y' }} | {{ event.date | date: '%l:%M %p' }}
+            {% else %}
+              {{ event.date_alt }}
+            {% endif %}
           </small>
         </h2>
 
@@ -19,14 +24,14 @@ billboard_class: billboard-stairs
           <address class="col-xs-8 text-left">
             <strong>{{ event.location_name }}</strong><br>
             <a href="{{ event.google_maps_url }}">
-              {{ event.address1 }}<br>
-              {{ event.address2 }}<br>
+              {{ event.location.address }}<br>
+              {{ event.location.city }}, {{ event.location.state }} {{ event.location.zip }}<br>
             </a>
           </address>
 
           <dl class="col-xs-4 text-right">
             <dt>Attire</dt>
-            <dd>{{ event.attire }}</dd>
+            <dd>{{ event.attire | capitalize }}</dd>
           </dl>
 
         </div>

@@ -1,7 +1,13 @@
 ---
 layout: default
 ---
-<header class="billboard billboard-header {{ page.billboard_class }}">
+{% capture style %}
+    {% if page.image_position %} background-position: {{ page.image_position }};{% endif %}
+    background-image: url({{ page.billboard_image }})
+{% endcapture %}
+
+<header class="billboard billboard-header"
+        style="{{style}}">
   <h1 class="billboard-text">
     {{ page.title }}
   </h1>
