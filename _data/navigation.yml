@@ -1,0 +1,16 @@
+- name: Our Story
+  link: /
+- name: Celebrations
+  link: /celebrations
+- name: People
+  link: /people
+- name: Details
+  link: /details
+- name: FAQ
+  link: /faq
+- name: City Guide
+  link: /guide
+- name: Etc
+  link: /etc
+- name: Updates
+  modal: subscribe-modal

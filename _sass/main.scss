@@ -524,15 +524,15 @@ dd {
     opacity: 1;
   }
 
-  .navbar-custom.top-nav-collapse .notification-link.notify a {
+  .navbar-custom.top-nav-collapse .modal-link.notify a {
     color: #8d5f9e;
   }
 
-  .notification-link .notification-link--icon {
+  .modal-link .modal-link--icon {
     display: none;
   }
 
-  .notification-link.notify .notification-link--icon {
+  .modal-link.notify .modal-link--icon {
     display: block;
     position: absolute;
     top: 10px;

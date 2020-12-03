@@ -39,7 +39,7 @@ $(function() {
   }
 
   var toggleNotificationIcon = function(show){
-    $('.notification-link').toggleClass('notify', show);  
+    $('.modal-link').toggleClass('notify', show);  
   }
   
   if (!hasSeenNotification()) toggleNotificationIcon(true);
@@ -60,11 +60,11 @@ $(function() {
   })
 
   // GA Tracking
-  $('.ga-email-nav').click(function(){
-    ga('send', 'event', 'Email Signup', 'Open Form', 'Nav Bar');
-  });
+  // $('.ga-email-nav').click(function(){
+  //   ga('send', 'event', 'Email Signup', 'Open Form', 'Nav Bar');
+  // });
 
-  $('.ga-email-etc-coming-soon').click(function(){
-    ga('send', 'event', 'Email Signup', 'Open Form', 'ETC - Coming Soon');
-  });
+  // $('.ga-email-etc-coming-soon').click(function(){
+  //   ga('send', 'event', 'Email Signup', 'Open Form', 'ETC - Coming Soon');
+  // });
 });
