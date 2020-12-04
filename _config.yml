@@ -13,6 +13,7 @@ baseurl: ""
 collections:
   stories:
     sort_by: order
+  modals:
 
 # Build settings
 markdown: kramdown

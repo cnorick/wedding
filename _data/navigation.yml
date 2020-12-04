@@ -12,5 +12,5 @@
   link: /guide
 - name: Etc
   link: /etc
-- name: Updates
-  modal: subscribe-modal
+- name: RSVP
+  modal_id: rsvp-modal
