@@ -24,6 +24,10 @@ $(document).ready(function () {
         rsvp();
     });
 
+    $('#phone-input').focus(function() {
+        $('#phone-help').collapse('show');
+    });
+
     function countGuests() {
         var count = 0;
         $('.guest-input').each(function() {
