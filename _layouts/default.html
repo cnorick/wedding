@@ -2,9 +2,11 @@
 <html>
     {% include head.html %}
     <body data-target=".navbar-fixed-top">
-    {% include nav.html %}
-    {{ content }}
-    {% include modals.html %}
-    {% include js.html %}
+        {% for js in site.data.root_js %}
+            {% include js.html src=js %}
+        {% endfor %}
+        {% include nav.html %}
+        {{ content }}
+        {% include modals.html %}
     </body>
 </html>
