@@ -12,5 +12,7 @@
   link: /guide
 - name: Etc
   link: /etc
+- name: Photos
+  link: 
 - name: RSVP
   modal_id: rsvp-modal

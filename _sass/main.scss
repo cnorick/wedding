@@ -390,6 +390,10 @@ dd {
   padding: 0;
   border: none;
   margin-bottom: 0;
+  img {
+    height: 500px;
+    object-fit: cover;
+  }
 }
 
 .billboard {
@@ -547,5 +551,14 @@ dd {
 
   .help-text {
     opacity: .8;
+  }
+}
+
+.portraits-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  .portrait {
+    padding: 20px;
   }
 }
