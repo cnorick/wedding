@@ -1,7 +1,23 @@
+- name: Wedding Shower
+  date: Thursday, May 26, 2016
+  time: 7pm
+  attire: Casual
+  description: We have decided to not have a gender-specific wedding shower, but instead have an inclusive pre-wedding party for all guests and family members to celebrate our upcoming nuptials. Join us for our brunch shower to help us get our wedding season started! Parking will be plentiful at the restaurant. If you are interested in bringing a gift, our registries are linked on the site!
+  transportation:
+  location:
+    address: 640 Pansy Hill Rd
+    city: Harriman
+    state: TN
+    long_state: Tennessee
+    zip: 37748
+    coordinates: 41.911652,-87.641253
+    google_maps_url: https://www.google.com/maps/place/St+Michael+in+Old+Town/@41.912635,-87.6408956,15z/data=!4m2!3m1!1s0x0:0xe227f2c7eb743c04
+    venue_name:
+
 - name: Wedding Ceremony
   date: 2021-04-03 17:00:00 −04:00
-  attire: casual
-  description: Foo bar
+  attire: snappy casual
+  description: Our wedding ceremony will be the perfect blend of our separate Catholic and Baptist traditions. Please arrive at least 10 minutes prior to the start of the ceremony in order to find your seat. There will be a parking attendant on site to direct you, and the venue will also provide transportation to the ceremony site if needed. We ask that you please ensure that your cell phones are off and out of sight for the duration of the ceremony.
   transportation:
   shuttle:
   location:
@@ -16,90 +32,8 @@
 
 - name: Reception
   date_alt: Immediately following the ceremony
-  attire: casual
-  description: Food will be served at the venue immediately following the ceremony.
-  location:
-    address: 640 Pansy Hill Rd
-    city: Harriman
-    state: TN
-    long_state: Tennessee
-    zip: 37748
-    coordinates: 41.911652,-87.641253
-    google_maps_url: https://www.google.com/maps/place/St+Michael+in+Old+Town/@41.912635,-87.6408956,15z/data=!4m2!3m1!1s0x0:0xe227f2c7eb743c04
-    venue_name:
-
-- name: Wedding Shower
-  date: Thursday, May 26, 2016
-  time: 7pm
-  attire: Casual
-  description: A casual family gathering where henna is applied in intricate designs to the hands and feet of the bride and her female guests. Meant as one of many ritual adornments for the Hindu bride, it is said that the darker the henna turns out, the greater the love the bride has for her groom.  Mehndi artists also hide the groom’s name or initials into the bride’s henna design and it is her job to find them before the wedding. Traditionally, the bride is not allowed to work in her husband’s house until after the mehndi has completely faded. Further, with their hands covered in henna paste, the women of the party are unable to cook or serve during the Mehndi celebration, so the men are invited to feed and serve the women.
-  transportation:
-  location:
-    address: 640 Pansy Hill Rd
-    city: Harriman
-    state: TN
-    long_state: Tennessee
-    zip: 37748
-    coordinates: 41.911652,-87.641253
-    google_maps_url: https://www.google.com/maps/place/St+Michael+in+Old+Town/@41.912635,-87.6408956,15z/data=!4m2!3m1!1s0x0:0xe227f2c7eb743c04
-    venue_name:
-
-- name: Garba
-  date: Friday, May 27, 2016
-  time: 7pm
-  attire: Semi-formal
-  description: A night of traditional Gujarati folk dancing! Set to energetic music, garba is a style of group dance performed as a ritual homage to a the Hindu goddess of creation, Ambama. Garba is usually accompanied by Raas, a similar style of dance dedicated to the Hindu god Krishna that incorporates a set of sticks called Dandiya. Both are traditionally performed during the Gujarati festival of Navratri (“nine-nights”) and also as a precedent to special occasions such as weddings. Everyone is invited and encourage to join in the dancing - don’t worry, there will be tutorials!  And keep an eye out for a few special performances from close family and friends.
-  transportation: Discounted self-parking will be available.
-  location:
-    address: 640 Pansy Hill Rd
-    city: Harriman
-    state: TN
-    long_state: Tennessee
-    zip: 37748
-    coordinates: 41.911652,-87.641253
-    google_maps_url: https://www.google.com/maps/place/St+Michael+in+Old+Town/@41.912635,-87.6408956,15z/data=!4m2!3m1!1s0x0:0xe227f2c7eb743c04
-    venue_name:
-
-- name: Hindu Wedding
-  date: Saturday, May 28, 2016
-  time: 10am
-  attire: Formal
-  description: The Hindu wedding ceremony as described by the Vedas, the Hindu scriptures, is over 5,000 years old and is traditionally performed in the Sanskrit language. The ceremony commemorates the bride and groom no longer existing as two independent souls but as a spiritual oneness. Ceremonies include the Barat (Arrival of the Groom), Pokhna Vidhi (Welcoming of the Groom), Jai Mala (Exchange of Garlands), Vastra Granthi Bandhan (Tying the Knot), Mangalphera (Holy Circles around the Fire), and Saptapadi (Taking Life’s Seven Steps).
-  transportation: Discounted self-parking will be available.
-  location:
-    address: 640 Pansy Hill Rd
-    city: Harriman
-    state: TN
-    long_state: Tennessee
-    zip: 37748
-    coordinates: 41.911652,-87.641253
-    google_maps_url: https://www.google.com/maps/place/St+Michael+in+Old+Town/@41.912635,-87.6408956,15z/data=!4m2!3m1!1s0x0:0xe227f2c7eb743c04
-    venue_name:
-
-- name: Catholic Wedding
-  date: Sunday, May 29, 2016
-  time: 3pm
-  attire: Black Tie Optional
-  description: The traditional Catholic wedding is enhanced in Filipino culture by several traditions. Ceremonial sponsors or godparents are chosen by the betrothed as role models for their future married life and participate in the procession with the bridal party. Two separate candles are lit at the beginning of the ceremony, which the bride and groom then join into a single flame signifying the union of their two families. A veil is placed over the shoulders of the bride and groom during the ceremony, demonstrating the clothing of two individuals as one. A cord is then looped in a figure 8 and placed over the heads of the bride and group to signify everlasting fidelity.
-  transportation: Limited self-parking available.
-  shuttle: Transportation will also be provided between Hilton Chicago and St. Michael in Old Town.
-  location:
-    address: 640 Pansy Hill Rd
-    city: Harriman
-    state: TN
-    long_state: Tennessee
-    zip: 37748
-    coordinates: 41.911652,-87.641253
-    google_maps_url: https://www.google.com/maps/place/St+Michael+in+Old+Town/@41.912635,-87.6408956,15z/data=!4m2!3m1!1s0x0:0xe227f2c7eb743c04
-    venue_name:
-
-- name: Reception
-  date: Sunday, May 29, 2016
-  time: 5:30pm
-  attire: Black Tie Optional
-  description: Join us for dinner and dancing as we celebrate our marriage into the night!
-  transportation: Complimentary valet parking will be available at Navy Pier. Follow signs for Navy Pier parking to the East Parking garage, entrance two.
-  shuttle: Transportation will also be provided between St. Michael in Old Town, Navy Pier and Hilton Chicago.
+  attire: snappy casual
+  description: The wedding reception is at the same venue as the ceremony and will commence directly after the ceremony ends. Venue staff will direct you to the reception space. Dinner will be provided and make sure to bring your dancing shoes!
   location:
     address: 640 Pansy Hill Rd
     city: Harriman
