@@ -4,6 +4,16 @@ body {
   font-family: Cardo, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #404040;
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrapper {
+  flex: 1 0 auto;
+}
+
+.footer-wrapper {
+  flex-shrink: 0;
 }
 
 html {
@@ -565,4 +575,20 @@ dd {
 
 .faq-answer {
   margin-left: 3rem;
+}
+
+footer.site-footer {
+  padding: 5px 10px;
+  background-color: #e0e2e4;
+  color: #7b7b7b;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  p {
+    font-size: 11pt;
+  }
+  a {
+    color: #118da7;
+  }
 }

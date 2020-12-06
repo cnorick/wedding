@@ -5,8 +5,14 @@
         {% for js in site.data.root_js %}
             {% include js.html src=js %}
         {% endfor %}
-        {% include nav.html %}
-        {{ content }}
         {% include modals.html %}
+        {% include nav.html %}
+
+        <div class="content-wrapper">
+            {{ content }}
+        </div>
+        <div class="footer-wrapper">
+            {% include footer.html %}
+        </div>
     </body>
 </html>
