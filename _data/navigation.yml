@@ -13,6 +13,6 @@
 - name: Registry
   link: /registry
 - name: Photos
-  link: 
+  link: /photo-gallery
 - name: RSVP
   modal_id: rsvp-modal

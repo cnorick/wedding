@@ -15,6 +15,15 @@ collections:
     sort_by: order
   modals:
 
+sass:
+  style: compressed
+
+defaults:
+  - scope:
+      path: "photos/"
+    values:
+      image: true
+
 # Build settings
 markdown: kramdown
 permalink: pretty
