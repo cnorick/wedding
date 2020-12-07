@@ -21,22 +21,13 @@ $(document).ready(function () {
     
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
+        e.stopImmediatePropagation();
         rsvp();
     });
 
     $('#phone-input').focus(function() {
         $('#phone-help').collapse('show');
     });
-
-    function countGuests() {
-        var count = 0;
-        $('.guest-input').each(function() {
-            if($(this).val()) {
-                count++;
-            }
-        });
-        return count;
-    }
 
     function rsvp() {
         const form = $('#rsvp-form');
@@ -53,31 +44,34 @@ $(document).ready(function () {
         if (use_rsvp_code && MD5($('#invite_code').val()) !== rsvp_code_md5) {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
-            $.ajax({
-                url: rsvp_post_address,
-                type: 'post',
-                data: JSON.stringify(data),
-                headers: {
-                    'X-Api-Key': api_key,
-                },
-                dataType: 'json',
-            }).done(function (data) {
-                $('#alert-wrapper').html('');
-
-                // TODO: Create these modals and set the value coming.
-                // if (coming) {
-                //     $('#rsvp-yes-modal').modal('show');
-                // }
-                // else {
-                //     $('#rsvp-no-modal').modal('show');
-                // }
-            }).fail(function (data) {
-                console.log(data);
-                $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
-            });
+            makeRsvpPost(data);
         }
     };
 });
+
+function makeRsvpPost(data) {
+    $.ajax({
+        url: rsvp_post_address,
+        type: 'post',
+        data: JSON.stringify(data),
+        headers: {
+            'X-Api-Key': api_key,
+        },
+        dataType: 'json',
+    }).done(function (res) {
+        $('#alert-wrapper').html('');
+        $('#rsvp-modal').modal('hide');
+        if (data.attending) {
+            $('#rsvp-yes-modal').modal('show');
+        }
+        else {
+            $('#rsvp-no-modal').modal('show');
+        }
+    }).fail(function (res) {
+        console.log(res);
+        $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
+    });
+}
 
 function createPostData(form) {
     const formData = objectifyForm(form);
