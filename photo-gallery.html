@@ -57,7 +57,7 @@ image_position: center center
 <div class="photos">
   {% assign image_files = site.static_files | where: "image", true %}
   {% for img in image_files %}
-    <img data-enlargeable style="cursor: zoom-in" src="{{site.baseurl}}/{{ img.path }}"/>
+    <img data-enlargeable style="cursor: zoom-in" src="{{site.baseurl}}{{ img.path }}"/>
   {% endfor %}
 </div>
 
