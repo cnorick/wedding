@@ -1,15 +1,19 @@
 rsvp:
-  use_code: false
+  use_code: true
   code: 1234
   code_md5: 81dc9bdb52d04dc20036dbd8313ed055
-  post_address: https://script.google.com/macros/s/AKfycbyPrWqSgI5GtAdPmv7_s5BqgFKZs4grEv0WiVrh-yUlEC4Z8fk/exec
+  post_address: https://api.nathanorick.com/rsvp
+  api_key: m7ccqIIa6S8uSBQzbhZzd1rZaoiCXObr1fcx4Wvy
   code_location: You can put the code on the back of your RSVP card, or turn off this functionality all together. The code for this sample is 1234
   yes_text: I'll be there
   no_text: I can't make it
   no_extra_guests_message: As much as we would love to have everyone, please only include guests that were listed on your invitation
   submit_text: RSVP
   cancel_text: Cancel
+
+  # Comment these out to disable
   song_text: What songs will get you dancing?
+  leave_a_message_text: Leave a message for the bride and groom.
 
 people:
   families_header: Our Families 

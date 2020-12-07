@@ -39,41 +39,67 @@ $(document).ready(function () {
     }
 
     function rsvp() {
-        var form = $('#rsvp-form');
-        var data = $(form).serialize();
-        data += "&number=" + countGuests();
+        const form = $('#rsvp-form');
+        const data = createPostData(form);
 
-        var nativeForm = form[0];
+        const nativeForm = form[0];
         for (var i = 0; i < nativeForm.elements.length; i++) {
             if (nativeForm.elements[i].value === '' && nativeForm.elements[i].hasAttribute('required')) {
                 return false;
             }
         }
-        console.log(data)
 
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We\'re saving your details.'));
         if (use_rsvp_code && MD5($('#invite_code').val()) !== rsvp_code_md5) {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
-            $.post(rsvp_post_address, data)
-                .done(function (data) {
-                    $('#alert-wrapper').html('');
+            $.ajax({
+                url: rsvp_post_address,
+                type: 'post',
+                data: JSON.stringify(data),
+                headers: {
+                    'X-Api-Key': api_key,
+                },
+                dataType: 'json',
+            }).done(function (data) {
+                $('#alert-wrapper').html('');
 
-                    // TODO: Create these modals and set the value coming.
-                    if (coming) {
-                        $('#rsvp-yes-modal').modal('show');
-                    }
-                    else {
-                        $('#rsvp-no-modal').modal('show');
-                    }
-                })
-                .fail(function (data) {
-                    console.log(data);
-                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
-                });
+                // TODO: Create these modals and set the value coming.
+                // if (coming) {
+                //     $('#rsvp-yes-modal').modal('show');
+                // }
+                // else {
+                //     $('#rsvp-no-modal').modal('show');
+                // }
+            }).fail(function (data) {
+                console.log(data);
+                $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
+            });
         }
     };
 });
+
+function createPostData(form) {
+    const formData = objectifyForm(form);
+    return {
+        names: [formData.name1, formData.name2, formData.name3, formData.name4].filter(Boolean),
+        phone: formData.phone,
+        songs: formData.song,
+        attending: formData.rsvpRadio === "yes",
+        message: formData.message,
+        code: formData.invite_code,
+    }
+}
+
+function objectifyForm(form) {
+    formArray = form.serializeArray();
+    //serialize data function
+    var returnObject = {};
+    for (var i = 0; i < formArray.length; i++){
+        returnObject[formArray[i]['name']] = formArray[i]['value'];
+    }
+    return returnObject;
+}
 
 // alert_markup
 function alert_markup(alert_type, msg) {
