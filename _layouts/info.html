@@ -3,7 +3,7 @@ layout: default
 ---
 {% capture style %}
     {% if page.image_position %} background-position: {{ page.image_position }};{% endif %}
-    background-image: url({{ page.billboard_image }})
+    background-image: url({{site.baseurl}}/{{ page.billboard_image }})
 {% endcapture %}
 
 <header class="billboard billboard-header"

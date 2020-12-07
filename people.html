@@ -1,7 +1,7 @@
 ---
 layout: info
 title: People
-billboard_image: /assets/img/tree.jpg
+billboard_image: assets/img/tree.jpg
 image_position: center center
 ---
 
@@ -12,7 +12,7 @@ image_position: center center
     {% for family in site.data.people.families %}
       <div class="portrait">
         <div class="thumbnail thumbnail-portrait">
-          <img src="/assets/img/people/{{ family.pic }}" class="img-thumbnail" alt="{{ family.name }}" title="{{ family.name }}">
+          <img src="{{site.baseurl}}/assets/img/people/{{ family.pic }}" class="img-thumbnail" alt="{{ family.name }}" title="{{ family.name }}">
           <div class="caption">
             <h4>{{ family.name }}</h4>
             <p>{{ family.people }}</p>
@@ -32,7 +32,7 @@ image_position: center center
     {% for kid in site.data.people.kids %}
       <div class="portrait">
         <div class="thumbnail thumbnail-portrait">
-          <img src="/assets/img/people/{{ kid.pic }}" class="img-thumbnail" alt="{{ kid.name }}" title="{{ kid.name }}">
+          <img src="{{site.baseurl}}/assets/img/people/{{ kid.pic }}" class="img-thumbnail" alt="{{ kid.name }}" title="{{ kid.name }}">
           <div class="caption">
             <p>
               {{ kid.name }}
@@ -52,7 +52,7 @@ image_position: center center
     {% assign his = site.data.people.his_side[forloop.index0] %}
     <div class="row">
       <div class="col-sm-3 col-md-offset-1 col-md-3 col-xs-6" style="margin-bottom: 60px">
-        <img class="img-thumbnail img-responsive" src="/assets/img/people/{{ her.pic }}" alt="{{ her.name }}" title="{{ her.name }}">
+        <img class="img-thumbnail img-responsive" src="{{site.baseurl}}/assets/img/people/{{ her.pic }}" alt="{{ her.name }}" title="{{ her.name }}">
       </div>
       <p class="col-sm-3 col-md-2 col-xs-6 text-left">
         {{ her.name }}<br><small>{{ her.role }}</small>
@@ -65,7 +65,7 @@ image_position: center center
           {{ his.name }}<br><small>{{ his.role }}</small>
         </p>
         <div class="col-sm-3 col-md-3 col-xs-6" style="margin-bottom: 60px">
-          <img class="img-thumbnail img-responsive" src="/assets/img/people/{{ his.pic }}" alt="{{ his.name }}" title="{{ his.name }}">
+          <img class="img-thumbnail img-responsive" src="{{site.baseurl}}/assets/img/people/{{ his.pic }}" alt="{{ his.name }}" title="{{ his.name }}">
         </div>
       {% endif %}
     </div>
